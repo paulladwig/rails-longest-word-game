@@ -1,0 +1,16 @@
+<div class="container">
+<h1>New Game</h1>
+
+<ul>
+  <% @rand_characters.each do |character| %>
+  <li><%= character %></li>
+  <% end %>
+</ul>
+
+<form action="/score" method="get">
+  <input type="text" name="word">
+  <input  type="hidden" name="list" value="<%=@rand_characters%>">
+  <input type="submit" name="submit">
+</form>
+
+</div>
